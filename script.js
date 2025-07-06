@@ -20,6 +20,15 @@ function getNumber(promptForUser) {
         console.warn("spatny cislo debile")
     }
 }
+function getOperator(promptForUser){
+    while (true) {
+        let operator = prompt(promptForUser);
+        if (operator in operations) {
+            return operator;
+        }
+        console.warn("Spatny operator")
+    }
+}
 
 const operations = {
     "+": add,
@@ -38,13 +47,9 @@ while (true) {
     secondNum = getNumber("Zadejte druhé číslo: ")
 
 
-    while (true) { // domaci ukol extrahovat do funkce!!
-        operator = prompt('vyberte operaci(+|-|/|*): ');
-        if (operator == '+'||'-'||'/'||'*') {
-            break;
-        }
-        // else { continue; }
-    }
+    operator = getOperator('Vyberte operaci(+|-|/|*): ');
+    
+    // else { continue; }
     // switch (operator) {
     //     case "+":
     //         console.log(`Váš výsledek je: ${add(firstNum, secondNum)}`);
