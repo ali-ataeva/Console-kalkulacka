@@ -20,26 +20,27 @@ while (true) {
         else { continue; }
     }
     while (true) {
-        let operator = prompt('vyberte operaci |+|-|/|*|: ');
+        let operator = prompt('vyberte operaci(+|-|/|*): ');
         if (operator == '+'||'-'||'/'||'*') {
             break;
         }
         else { continue; }
     }
-    if (operator=="+") {
+    if (operator == "+") {
         console.log(`Váš výsledek je: ${add(firstNum, secondNum)}`)
     }
-    else if (operator=="-"){
+    else if (operator == "-"){
         console.log(`Váš výsledek je: ${subtract(firstNum, secondNum)}`)
     }
-    else if (operator=="*"){
+    else if (operator == "*"){
         console.log(`Váš výsledek je: ${multiply(firstNum, secondNum)}`)
     }
     else{
         console.log(`Váš výsledek je: ${divide(firstNum, secondNum)}`)
     }
-    
-
-    
-
+    let continueDecision = prompt('Přejete si pokračovat?(ano/ne): ')
+    if (continueDecision == 'ano') {
+        continue;
+    }
+    else { break; }
 }
