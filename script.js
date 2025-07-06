@@ -11,8 +11,14 @@ function divide(first, second) {
     return first / second;
 }
 while (true) {
-    let firstNum = prompt('Vložte první číslo: ');
-    let secundNum = prompt('Vložte druhé číslo: ');
+    while (true) {
+        const firstNum = Number(prompt("Zadejte první číslo: ").replace(",", "."));
+        const secondNum = Number(prompt("Zadejte druhé číslo: ").replace(",", "."));
+        if (!(isNaN(firstNum))&&!(isNaN(secondNum))) {
+            break;
+        }
+        else { continue; }
+    }
     while (true) {
         let operator = prompt('vyberte operaci +|-|/|*: ');
         if (operator == "+"||"-"||"/"||"*") {
