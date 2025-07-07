@@ -29,6 +29,14 @@ function getOperator(promptForUser){
         console.warn("Spatny operator")
     }
 }
+function operatorPrompt(operations) {
+    operations.forEach(element => {
+        for (let index = 0; index < array.length; index++) {
+            const element = array[index];
+            
+        }
+    });
+}
 
 const operations = {
     "+": add,
@@ -46,8 +54,7 @@ while (true) {
     firstNum = getNumber("Zadejte první číslo: ")
     secondNum = getNumber("Zadejte druhé číslo: ")
 
-
-    operator = getOperator('Vyberte operaci(+|-|/|*): ');
+    operator = getOperator(`Vyberte operaci (${Object.keys(operations).join("|")}): `);
     
     // else { continue; }
     // switch (operator) {
